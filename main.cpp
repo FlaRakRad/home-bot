@@ -23,7 +23,7 @@ class Bot
 private:
     std::string token;
     TgBot::Bot bot;
-    std::vector<int64_t> whitelist = {1823097366};
+    std::vector<int64_t> whitelist = {}; // white list
     std::unordered_map<std::string, std::function<void(TgBot::Message::Ptr, const std::vector<std::string>&)>> commands;
 
     bool isAllowed(int64_t userId) 
